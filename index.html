@@ -4,9 +4,30 @@
     <link rel='stylesheet' href='./styles.css'> 
 </head>
 <body>
-  <div id='left-container'>
-    <div id='corner-logo'>
+  <div id='page-background'>
+    <div id='main-section'>
     </div>
+    <div id='left-sidebar'>
+      <button class="card-button"> Add card</button>
+      <div id='input-container'>
+        <h3>Select an exericse to add from list: </h3>
+        <input list='exercises' name='exercises' id='list-search' class='user-search' placeholder="Start typing an exercise">
+        <datalist id='exercises'>
+          <option value='Squat'>
+          <option value='Bench Press'>
+          <option value='Deadlift'>
+          <option value='Barbell Row'>
+          <option value='Pull-up'>
+          <option value='Barbell Curl'>
+          <option value='French Press'>
+        </datalist>
+        <input type='submit' class='submit-button' value='Submit'>
+        <h3>Optionally, search a database of exercises</h3>
+        <input name='exercises' class='user-search' placeholder='Enter exercise name'>
+        <input type='submit' id='db-search' class='submit-button' value='Search'> 
+      </div>
+    </div>
+    <div id='corner-logo'></div>
   </div>
-  <div id='right-container'></div>
+    <script type='text/javascript' src='./src/index.js'></script>
 </body>
