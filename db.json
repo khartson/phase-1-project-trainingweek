@@ -1,0 +1,40 @@
+{
+  "presets": {
+    "Bench Press": {
+      "name": "Bench Press",
+      "description": "Lay down on a bench, the bar should be directly above your eyes, the knees are somewhat angled and the feet are firmly on the floor. Concentrate, breathe deeply and grab the bar more than shoulder wide. Bring it slowly down until it briefly touches your chest at the height of your nipples. Push the bar up.",
+      "url": "https://www.bodybuilding.com/fun/images/2015/layne-norton-bench-tutorial-tablet-960x540.jpg"
+    },
+    "Squat": {
+      "name": "Squat",
+      "description": "Place a barbell in a rack just below shoulder-height. Dip under the bar to put it behind the neck across the top of the back, and grip the bar with the hands wider than shoulder-width apart. Lift the chest up and squeeze the shoulder blades together to keep the straight back throughout the entire movement. Stand up to bring the bar off the rack and step backwards, then place the feet so that they are a little wider than shoulder-width apart. Sit back into hips and keep the back straight and the chest up, squatting down so the hips are below the knees. From the bottom of the squat, press feet into the ground and push hips forward to return to the top of the standing position.",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj8G6VcB3YrkX-CCR6hxndMLUryjTMQz_EdQ&usqp=CAU"
+    },
+    "Deadlift": {
+      "name": "Deadlift",
+      "description": "Stand firmly, with your feet slightly more than shoulder wide apart. Stand directly behind the bar where it should barely touch your shin, your feet pointing a bit out. Bend down with a straight back, the knees also pointing somewhat out. Grab the bar with a shoulder wide grip, one underhand, one reverse grip. Pull the weight up. At the highest point make a slight hollow back and pull the bar back. Hold 1 or 2 seconds that position. Go down, making sure the back is not bent. Once down you can either go back again as soon as the weights touch the floor, or make a pause, depending on the weight.",
+      "url": "https://i.ytimg.com/vi/_8OeUAjnnBE/maxresdefault.jpg"
+    },
+    "Barbell Row": {
+      "name": "Barbell Row",
+      "description": "Grab the barbell with a wide grip (slightly more than shoulder wide) and lean forward. Your upper body is not quite parallel to the floor, but forms a slight angle. The chest's out during the whole exercise. Pull now the barbell with a fast movement towards your belly button, not further up. Go slowly down to the initial position. Don't swing with your body and keep your arms next to your body.",
+      "url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbarbend.com%2Fbent-over-row%2F&psig=AOvVaw2rUYeVBwRPsagavwa9s8d2&ust=1639597609303000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjjhpyH5PQCFQAAAAAdAAAAABAJ"
+    },
+    "Pull-up": {
+      "name": "Pull-up",
+      "description": "Grab the pull up bar with a wide grip, the body is hanging freely. Keep your chest out and pull yourself up till your chin reaches the bar or it touches your neck, if you want to pull behind you. Go with a slow and controlled movement down, always keeping the chest out.",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTmywdi1N-opSq_tkmlYduBc7X38FLzsGPwQ&usqp=CAU"
+    },
+    "Barbell Curl": {
+      "name": "Barbell Curl",
+      "description": "Hold the Barbell shoulder-wide, the back is straight, the shoulders slightly back, the arms are streched. Bend the arms, bringing the weight up, with a fast movement. Without pausing, let down the bar with a slow and controlled movement.",
+      "url": "https://www.muscleandfitness.com/wp-content/uploads/2013/03/BarbellCurl_30.jpg?w=650&h=360&crop=1&quality=86&strip=all"
+    },
+    "French Press": {
+      "name": "French Press",
+      "description": "Hold the dumbbells and lay down on a flat bench in such a way that around 1/4 of your head is over the edge. Stretch your arms with the weights and bend them so that the dumbbells are lowered (make sure they don't touch each other). Just before they touch your forehead, push them up.",
+      "url": "https://ignorelimits.com/wp-content/uploads/2016/08/Dumbbell_Skullcrusher_Start.jpg"
+    }
+    }
+    
+}

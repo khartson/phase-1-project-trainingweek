@@ -1,27 +1,29 @@
-let presets = {
-    'Bench Press': ['Bench Press',
-    `Lay down on a bench, the bar should be directly above your eyes, the knees
-     are somewhat angled and the feet are firmly on the floor. Concentrate, 
-     breathe deeply and grab the bar more than shoulder wide. Bring it slowly
-     down until it briefly touches your chest at the height of your nipples. 
-     Push the bar up.`,
-     'https://www.bodybuilding.com/fun/images/2015/layne-norton-bench-tutorial-tablet-960x540.jpg',
-    ], 
-}
-
 let presetForm = document.querySelector('#drop-submit'); 
 presetForm.addEventListener('click', submitPreset); 
 
 function submitPreset(e) {
     let choice = document.querySelector('#list-search');
-    if (presets[choice.value]) {
-        let collection = document.querySelector('#card-collection'); 
-        collection.append(createCard(presets[choice.value])); 
-        return; 
-    } else {
-        alert('Please select a choice from the dropdown menu.');
-        choice.value = ''; 
-    } 
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      
+      fetch("http://localhost:3000/presets/", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            if (result[choice.value]) {
+                let name = result[choice.value]["name"];
+                let description = result[choice.value]["description"];
+                let url = result[choice.value]["url"];
+                let card = createCard([name, description, url]);
+                console.log(card); 
+                let collection = document.querySelector('#card-collection');
+                collection.append(card);
+                return; 
+            }
+            
+        })
+        .catch(error => console.log('error', error));
     
 }
 
