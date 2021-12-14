@@ -6,9 +6,10 @@
 <body>
   <div id='page-background'>
     <div id='main-section'>
+      <div id='card-collection'></div>
     </div>
     <div id='left-sidebar'>
-      <button class="card-button"> Add card</button>
+      <button class="card-button" id='test-button'> Add card</button>
       <div id='input-container'>
         <h3>Select an exericse to add from list: </h3>
         <input list='exercises' name='exercises' id='list-search' class='user-search' placeholder="Start typing an exercise">
@@ -21,7 +22,7 @@
           <option value='Barbell Curl'>
           <option value='French Press'>
         </datalist>
-        <input type='submit' class='submit-button' value='Submit'>
+        <input id='drop-submit' type='submit' class='submit-button' value='Submit'>
         <h3>Optionally, search a database of exercises</h3>
         <input name='exercises' class='user-search' placeholder='Enter exercise name'>
         <input type='submit' id='db-search' class='submit-button' value='Search'> 
