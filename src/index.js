@@ -19,14 +19,55 @@ function submitPreset(e) {
                 console.log(card); 
                 let collection = document.querySelector('#card-collection');
                 collection.append(card);
+                choice.value = ''; 
                 return; 
             }
+            alert("Please enter a valid choice from the dropdown menu!")
+            choice.value = ''; 
+            return; 
             
         })
         .catch(error => console.log('error', error));
-    
 }
 
+let search = document.querySelector('#db-search'); 
+search.addEventListener('click', dbSearch); 
+
+function dbSearch(e) {
+    let query = document.querySelector('#db-searchbar');
+    let formatQuery = capitalize(query.value); 
+    let link  = `https://wger.de/api/v2/exerciseinfo/?name=${formatQuery}`;
+    fetch(link)
+    .then(response => response.json())
+    .then(result => {
+        if (result['results'][0]) {
+            let name = result['results'][0]['name'];
+            let description = cleanseHTML(result['results'][0]['description']);
+            let url = result['results'][0]['images'][0]['image'];
+            let collection = document.querySelector('#card-collection');
+            let card = createCard([name,description, url]);
+            collection.append(card);
+            return;
+        }
+        alert('No results for your search. If the exercise name is multiple words (such as "Bench Press"), please ensure that the first letter of both words are capitalized. Some exercises, such as "Chin-ups" are entered as hyphenated entries.'); 
+    }).catch(error => console.log('error', error));
+}
+
+function cleanseHTML(html) {
+    let div = document.createElement('div');
+    div.innerHTML = html;
+    return(div.innerText); 
+}
+
+function capitalize(entry) {
+    entry = entry.toLowerCase();
+    let formatted = [];
+    entry.split(' ').forEach((word) => {
+        formatted.push( word.at(0).toUpperCase() + word.slice(1));
+    })
+    return formatted.join(' '); 
+
+}
 function createCard([name, description, url]) {
     let card = document.createElement('div'); 
     card.className = 'exercise-card'; 
@@ -34,6 +75,11 @@ function createCard([name, description, url]) {
     let img = document.createElement('img');
     img.className = 'exercise-image'; 
     img.src = url;
+   
+    
+    let imgContainer = document.createElement('div');
+    imgContainer.className = 'image-container';
+    imgContainer.appendChild(img); 
     
     let content = document.createElement('div'); 
     content.className = 'card-content'; 
@@ -60,9 +106,9 @@ function createCard([name, description, url]) {
 
     footer.appendChild(button); 
 
-    card.appendChild(img);
-    card.append(content);
-    card.append(footer); 
+    card.appendChild(imgContainer); 
+    card.appendChild(content);
+    card.appendChild(footer); 
     return card; 
 }
 
