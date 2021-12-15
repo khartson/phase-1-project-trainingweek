@@ -41,9 +41,18 @@ function dbSearch(e) {
     .then(response => response.json())
     .then(result => {
         if (result['results'][0]) {
+            let url = 'https://previews.123rf.com/images/corazonphoto/corazonphoto0904/corazonphoto090400155/4654132-weights-and-free-weights-in-a-gym.jpg'
             let name = result['results'][0]['name'];
             let description = cleanseHTML(result['results'][0]['description']);
-            let url = result['results'][0]['images'][0]['image'];
+            if (result['results'][0]['images'].length != 0){
+                console.log('found');
+                url = result['results'][0]['images'][0]['image'];
+            }
+            if(result['results'][0]['images'].length > 0){
+                let url = result['results'][0]['images'][0]['image'];
+            } else {
+                let url = 'https://www.clipartmax.com/png/middle/319-3191141_barbell-png-dumbbell-barbell-fitness-sport-gym-svg-gym-icon-black-and.png';
+            }
             let collection = document.querySelector('#card-collection');
             let card = createCard([name,description, url]);
             collection.append(card);
