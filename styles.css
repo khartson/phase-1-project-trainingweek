@@ -25,7 +25,7 @@ html, body {
 
 #card-collection {
   margin: 2rem;
-  /* display: inline-block; */
+  display: inline-block;
 }
 
 #left-sidebar {
